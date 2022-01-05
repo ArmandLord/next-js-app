@@ -4,13 +4,13 @@ import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 
 
 const navigation = [
-  // {
-  //   name: "R&M-API",
-  //   href: "https://rickandmortyapi.com/",
-  //   current: true,
-  //   target: true,
-  // },
-  { name: "Equipo", href: "#", current: true },
+  {
+    name: "R&M-API",
+    href: "https://rickandmortyapi.com/",
+    current: true,
+    target: true,
+  },
+  { name: "Equipo", href: "#", current: false },
   { name: "Cursos", href: "#", current: false },
   { name: "Reports", href: "#", current: false },
 ];
@@ -49,7 +49,8 @@ const Layout = ({ children, user }) => {
                           <a
                             key={item.name}
                             href={item.href}
-                            // target={item.target ? "_blank" : null} 
+                            target={item.target ? "_blank" : null}
+                            rel="noreferrer"
                             className={classNames(
                               item.current
                                 ? "bg-gray-900 text-white"
